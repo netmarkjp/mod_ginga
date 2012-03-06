@@ -1,0 +1,21 @@
+
+instruction
+--------------
+
+.. code:: bash
+
+ $ cd src
+ 
+ ## generate from template
+ $ apxs -g -n ginga
+
+ ## install
+ $ cd ginga
+ $ sudo apxs -i -a -c mod_ginga.c
+
+after that, add "SetHandler" to httpd.conf, and restart httpd
+
+.. code:: httpd.conf
+
+ SetHandler ginga
+
